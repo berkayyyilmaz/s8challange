@@ -1,0 +1,49 @@
+[
+    {
+    "id": 1,
+    "productName": "spor ayakkabısı",
+    "productSizePriceArray": [
+        {
+            "id": 1,
+            "productPrice": 100,
+            "productSize": 37
+        },
+        {
+            "id": 2,
+            "productPrice": 120,
+            "productSize": 34
+        }
+    ]
+},
+{
+    "id": 2,
+    "productName": "klasik ayakkabısı",
+    "productSizePriceArray": [
+        {
+            "id":1,
+            "productPrice": 100,
+            "productSize": 37
+        },
+        {
+            "id": 2,
+            "productPrice": 120,
+            "productSize": 34
+        }
+    ]
+},
+{
+    "id": 3,
+    "productName": "bot",
+    "productSizePriceArray": [
+        {
+            "id": 1,
+            "productPrice": 100,
+            "productSize": 37
+        },
+        {
+            "id": 2,
+            "productPrice": 120,
+            "productSize": 34
+        }
+    ]
+}]
