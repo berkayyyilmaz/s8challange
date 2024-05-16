@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import sahteVeri from './assets/sahteVeri.json'
 import ProductDetail from './components/ProductDetail'
+import ProductUpdate from './components/ProductUpdate'
 
 function App() {
 const [selectedProduct,setSelectedProduct] = useState(null)
@@ -27,11 +28,15 @@ const handleClickDetails = (event) => {
       <div>{sahteVeri.map((item, index)=> 
         <div key={index}>
           <p>Ürün Adı: {item.productName}     Ürün ID: {item.id}</p>
-          <button id={item.id} onClick={handleClickUpdate}>Güncelle</button>
+          <button onClick={() => handleClickUpdate(item.id)}>Güncelle</button>
           <button id={item.id} onClick={handleClickDetails}>Detay</button>
         </div>)
       }
-      {selectedProduct && <ProductDetail product={selectedProduct}/>}</div>
+      {selectedProduct && <ProductDetail product={selectedProduct}/>}
+
+      {toBeUpdated && <ProductUpdate product={toBeUpdated}/>}
+      
+      </div>
       {/* toBeUpdated probs olarak yollanacak */}
     </>
   )
