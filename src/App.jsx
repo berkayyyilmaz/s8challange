@@ -10,12 +10,11 @@ function App() {
 const [selectedProduct,setSelectedProduct] = useState(null)
 const [toBeUpdated, setToBeUpdated] = useState()
 
-const handleClickUpdate = (event) => {
-  event.preventDefault();
-  const updatedproduct = sahteVeri.find((product)=> product.id == event.target.id );
-  setToBeUpdated(updatedproduct)
-  
-}
+const handleClickUpdate = (id) => {
+  const updatedproduct = sahteVeri.find((product) => product.id === id);
+  setToBeUpdated(updatedproduct);
+};
+
 const handleClickDetails = (event) => {
   event.preventDefault();
   const productDetail = sahteVeri.find((product)=> product.id == event.target.id );
@@ -29,6 +28,7 @@ const handleClickDetails = (event) => {
         <div key={index}>
           <p>Ürün Adı: {item.productName}     Ürün ID: {item.id}</p>
           <button onClick={() => handleClickUpdate(item.id)}>Güncelle</button>
+
           <button id={item.id} onClick={handleClickDetails}>Detay</button>
         </div>)
       }
